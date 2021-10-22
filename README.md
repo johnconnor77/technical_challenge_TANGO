@@ -1,9 +1,7 @@
-# Tecnhical Challenge PRGX
+# Technical Challenge TANGO
  
 ---
 This API is  a simple service to help users schedule appointments.
-![](https://p3y6v9e6.stackpathcdn.com/wp-content/uploads/zikoko/2020/06/saving-things-to-cart.gif)
-
 
 ## Environment
 
