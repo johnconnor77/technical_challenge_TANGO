@@ -17,13 +17,12 @@ app = FastAPI(title="Sabrina Date API",
 
 @app.on_event('startup')
 async def connect_redis():
-    red.redis = await red.redis_connection()
+    red.redis = red.redis_connection()
 
 
 @app.on_event('shutdown')
 async def disconnect_redis():
     red.redis.close()
-    await red.redis.await_closed()
 
 
 @app.post("/api/schedule/", summary="Creates an Appointment for certain User",

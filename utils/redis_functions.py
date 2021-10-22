@@ -11,7 +11,7 @@ async def redis_save(key: object, value: object) -> object:
     :return: object
     """
     if key is not None and value is not None:
-        await red.redis.set(json.dumps(key), json.dumps(value))
+        red.redis.set(json.dumps(key), json.dumps(value))
 
 
 async def redis_load(key: object) -> object:
@@ -22,7 +22,7 @@ async def redis_load(key: object) -> object:
     """
     if key is None:
         return None
-    value = await red.redis.get(key)
+    value = red.redis.get(key)
     if value is not None:
         return json.loads(value)
-    return "error, dataplugin_id is not related to any bot"
+    return "error, user_id is not related"
