@@ -36,7 +36,7 @@ async def schedule(appointment_to_schedule: AppointmentModel):
     value = {'date_appointment': appointment_to_schedule.date_appointment.isoformat(),
              'start_time': appointment_to_schedule.start_time.isoformat(),
              'end_time': appointment_to_schedule.end_time.isoformat()}
-    await redis_save(key, value)
+    redis_save(key, value)
 
     return JSONResponse({"user": key, "appointment_info": value})
 
@@ -44,7 +44,7 @@ async def schedule(appointment_to_schedule: AppointmentModel):
 @app.get("/api/appointments/", summary="List Appointments for certain User",
          description="Endpoint that takes a user ID (required) and returns all appointments for the user")
 async def appointments(user_id: int):
-    user_appointments = await redis_load(user_id)
+    user_appointments = redis_load(user_id)
 
     return JSONResponse({"user": user_id, "appointments": user_appointments})
 

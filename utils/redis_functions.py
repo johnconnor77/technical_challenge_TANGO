@@ -2,7 +2,7 @@ import json
 import utils.redis_object as red
 
 
-async def redis_save(key: object, value: object) -> object:
+def redis_save(key: object, value: object) -> object:
     """
         Function that allows to load certain value from Redis Database
     :param key: Our redis Key that stores each element by its user_id
@@ -14,7 +14,7 @@ async def redis_save(key: object, value: object) -> object:
         red.redis.set(json.dumps(key), json.dumps(value))
 
 
-async def redis_load(key: object) -> object:
+def redis_load(key: object) -> object:
     """
         Function that allows to load certain value from Redis Database
     :param key: Our redis Key that stores each element by its user_id
