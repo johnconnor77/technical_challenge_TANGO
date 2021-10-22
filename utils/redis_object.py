@@ -1,6 +1,7 @@
 import aioredis
 import json
 import os
+import urlparse
 
 # redis = None
 
