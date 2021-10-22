@@ -1,7 +1,7 @@
 import aioredis
 import json
 import os
-import urlparse
+from urllib.parse import urlparse
 
 # redis = None
 HEROKU = True
