@@ -4,7 +4,7 @@ import os
 import urlparse
 
 # redis = None
-
+HEROKU = True
 TEST_REDIS_URL = 'redis://localhost'
 HEROKU_REDIS_URL = os.getenv('REDISTOGO_URL')
 
@@ -13,5 +13,8 @@ url = urlparse.urlparse(redis_url)
 
 
 async def redis_connection():
-    redis_db = await aioredis.Redis(Host=url.hostname, port=url.port, db=0, password=url.password)
+    if HEROKU:
+        redis_db = await aioredis.Redis(Host=url.hostname, port=url.port, db=0, password=url.password)
+    else:
+        pass
     return redis_db
