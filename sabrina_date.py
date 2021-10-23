@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 from appointment_models import AppointmentModel
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import JSONResponse
