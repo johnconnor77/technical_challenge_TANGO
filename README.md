@@ -88,7 +88,7 @@ Type the following command at your shell prompt
 
 Sabrina Date API was deployed at Heroku where you can also test it from the docs endpoint
 
-[https://sabrina-date-tango.herokuapp.com/docs](https://sabrina-date-tango.herokuapp.com/docs/docs/)
+[https://sabrina-date-tango.herokuapp.com/docs](https://sabrina-date-tango.herokuapp.com/docs/)
 
 
 #### Postman
