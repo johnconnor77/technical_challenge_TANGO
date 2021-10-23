@@ -4,7 +4,7 @@ import os
 import urllib.parse as urlparse
 
 # redis = None
-HEROKU = False
+HEROKU = True
 TEST_REDIS_URL = 'redis://localhost'
 HEROKU_REDIS_URL = os.getenv('REDISTOGO_URL', 'redis://localhost:6379')
 
