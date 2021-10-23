@@ -105,6 +105,13 @@ Sabrina Date API was deployed at Heroku where you can also test it from the docs
 ![GET-HEROKU](https://user-images.githubusercontent.com/51679898/138546284-43c0d20f-093b-4f8d-97c4-7a585d82dc9b.png)
 
 
+### NOTES:
+
+In case you clone this repository for trying locally, have in mind to change this variable HEROKU to *False*
+
+![HEROKU-settings](https://user-images.githubusercontent.com/51679898/138546997-58a4d420-7886-4673-9108-017d0b9c4d0a.png)
+
+
 Author:
 
 * **Juan F. Calle**  - [johnconnor77](https://github.com/johnconnor77)
