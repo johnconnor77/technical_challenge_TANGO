@@ -6,7 +6,7 @@ import urllib.parse as urlparse
 # redis = None
 HEROKU = True
 TEST_REDIS_URL = 'redis://localhost'
-HEROKU_REDIS_URL = "redis-12007.c100.us-east-1-4.ec2.cloud.redislabs.com:12007"
+HEROKU_REDIS_URL = "redis:// redis-12007.c100.us-east-1-4.ec2.cloud.redislabs.com:12007"
 
 def redis_connection():
     if HEROKU:
