@@ -76,7 +76,7 @@ async def schedule(appointment_to_schedule: AppointmentModel):
         value = user_appointments
         redis_save(key, value)
 
-    return JSONResponse({ f'Appointment  setted for user {key}': add_appointment})
+    return JSONResponse({f'Appointment  setted for user {key}': add_appointment})
 
 
 @app.get("/api/appointments/", summary="List Appointments for certain User",
@@ -96,5 +96,7 @@ async def appointments_list(user_id: int):
     return JSONResponse({"user": user_id, "appointments_list": user_appointments})
 
 
+# TODO: Endpoints for deleting or modifying dates
+
 if __name__ == "__main__":
-    uvicorn.run("sabrina_date:app", host="127.0.0.1", port=5000, log_level="info", debug=True)
+    uvicorn.run("sabrina_date:app", host="127.0.0.1", port=5000, log_level="info")
