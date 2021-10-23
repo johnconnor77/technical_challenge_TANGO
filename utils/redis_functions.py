@@ -25,4 +25,4 @@ def redis_load(key: object) -> object:
     value = red.redis.get(key)
     if value is not None:
         return json.loads(value)
-    return "error, user_id is not related"
+    return "error, user_id is not related with any appointment"
