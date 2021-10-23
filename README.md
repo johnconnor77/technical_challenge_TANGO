@@ -29,9 +29,12 @@ GNU/Linux
 File Name | Description
 --- | ---
 `sabrina_date.py` | Executable file for API schema 
+`worker.py` | Background job for Redis database 
 `appointment_models/__init__.py` |  Module with AppointmentModel  class that specifies the format and data type of input by User post request
+`utils/redis_object.py & utils/redis_functions.py` | Files that allows to handle redis connection and the data manipulation over database(SET,GET redis methods)
+`utils/extra_functions.py` | Functions that allows handling restrictions over POST request
 `requirements.txt & runtime.txt` |  Files that specifies python runtime version and requirements of modules
-`Procfile` |  File that specifies the commands that are executed by the app on startup
+`Procfile` |  File that specifies the commands that are executed by the app on Heroku startup
 
 ## Example Usage
 
@@ -50,7 +53,6 @@ Type the following command at your shell prompt
 ### Remote Example 
 
 Sabrina Date API 
-
 
 
 
