@@ -18,11 +18,11 @@ def redis_load(key: object) -> object:
     """
         Function that allows to load certain value from Redis Database
     :param key: Our redis Key that stores each element by its user_id
-    :return: object
+    :return: object otherwise none
     """
     if key is None:
         return None
     value = red.redis.get(key)
     if value is not None:
         return json.loads(value)
-    return "error, user_id is not related with any appointment"
+    return None
