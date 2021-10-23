@@ -55,9 +55,11 @@ async def schedule(appointment_to_schedule: AppointmentModel):
         raise HTTPException(status_code=400, detail="Time Span for Appointment is not allowed")
 
     if not redis_load(key):
-        value = [{'date_appointment': date_appointment,
-                  'start_time': start_time.isoformat(),
-                  'end_time': end_time.isoformat()}]
+        add_appointment = {'date_appointment': date_appointment,
+                           'start_time': start_time.isoformat(),
+                           'end_time': end_time.isoformat()}
+
+        value = [add_appointment]
 
         redis_save(key, value)
     else:
