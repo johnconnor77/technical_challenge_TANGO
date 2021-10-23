@@ -12,7 +12,7 @@ GNU/Linux
 ## How to install
 1. Clone the repository below
 
-`https://github.com/johnconnor77/tecnhical_challenge_TANGO`
+`https://github.com/johnconnor77/technical_challenge_TANGO`
 
 2. Install dependencies from requirements.txt
 
